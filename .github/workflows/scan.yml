@@ -35,6 +35,8 @@ jobs:
           RISK_FRACTION: "0.01"
           MAX_POSITION_FRACTION: "0.20"
           MAX_POSITIONS: "3"
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python scanner.py
 
       - name: Publish latest report
