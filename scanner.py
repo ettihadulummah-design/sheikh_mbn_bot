@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import Any
 import requests
 
-BASE_URL = "https://api.binance.com"
+BASE_URL = "https://data-api.binance.vision"
 SYMBOLS = ["BTCUSDT", "ETHUSDT", "BNBUSDT", "SOLUSDT", "XRPUSDT", "NEARUSDT"]
 CAPITAL_USDT = float(os.getenv("CAPITAL_USDT", "300"))
 RISK_FRACTION = float(os.getenv("RISK_FRACTION", "0.01"))
@@ -108,20 +108,35 @@ def fmt(x: Any) -> str:
     return str(x)
 
 def send_telegram(text: str) -> str:
-    """Send the report to Telegram when bot credentials are configured."""
     token = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
     chat_id = os.getenv("TELEGRAM_CHAT_ID", "").strip()
+
     if not token or not chat_id:
-        return "Telegram not configured (missing GitHub Secrets)."
-    # Telegram message limit is 4096 chars; keep a concise alert.
+        return "Telegram not configured."
+
     message = text[:3900]
-    response = SESSION.post(
-        f"https://api.telegram.org/bot{token}/sendMessage",
-        json={"chat_id": chat_id, "text": message, "disable_web_page_preview": True},
-        timeout=20,
-    )
-    response.raise_for_status()
-    return "Telegram notification sent."
+
+    try:
+        response = SESSION.post(
+            f"https://api.telegram.org/bot{token}/sendMessage",
+            json={
+                "chat_id": chat_id,
+                "text": message,
+                "disable_web_page_preview": True,
+            },
+            timeout=20,
+        )
+
+        if not response.ok:
+            print("Telegram API error:", response.status_code, response.text)
+            return "Telegram notification failed; see API error above."
+
+        print("Telegram notification sent.")
+        return "Telegram notification sent."
+
+    except Exception as exc:
+        print("Telegram error:", str(exc))
+        return "Telegram notification failed."
 
 def main() -> None:
     timestamp = datetime.now(timezone.utc).isoformat(timespec="seconds")
