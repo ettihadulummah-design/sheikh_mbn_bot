@@ -1,17 +1,17 @@
 # Binance Conservative Spot Scanner
-- Scan time (UTC): 2026-11-07T15:52:03+00:00
+- Scan time (UTC): 2026-11-07T16:31:56+00:00
 - Capital: $300.00 | Max risk/trade: $3.00
 - Overall: **WAIT / NO TRADE**
 - Symbols: BTCUSDT, ETHUSDT, BNBUSDT, SOLUSDT, XRPUSDT, NEARUSDT
 
 | Pair | Signal | Score | Price | RSI 4h | Vol x | Stop | Target 1 | Target 2 | Suggested USDT |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| BTCUSDT | WAIT | 0/6 | 75,984.5 | 17.0 | 0.22 | 73,705 | 80,543.6 | 82,823.1 | 60 |
-| ETHUSDT | WAIT | 0/6 | 2,245.3 | 16.6 | 0.2 | 2,177.94 | 2,380.02 | 2,447.38 | 60 |
-| BNBUSDT | WAIT | 0/6 | 694.8 | 33.48 | 0.27 | 673.956 | 736.488 | 757.332 | 60 |
-| SOLUSDT | WAIT | 0/6 | 89.99 | 21.17 | 0.2 | 87.2903 | 95.3894 | 98.0891 | 60 |
-| XRPUSDT | WAIT | 0/6 | 1.173 | 17.43 | 0.47 | 1.13781 | 1.24338 | 1.27857 | 60 |
-| NEARUSDT | WAIT | 1/6 | 3.704 | 23.39 | 0.33 | 3.59288 | 3.92624 | 4.03736 | 60 |
+| BTCUSDT | WAIT | 0/6 | 75,758 | 16.9 | 0.25 | 73,485.3 | 80,303.5 | 82,576.2 | 60 |
+| ETHUSDT | WAIT | 0/6 | 2,237.28 | 16.62 | 0.27 | 2,170.16 | 2,371.52 | 2,438.64 | 60 |
+| BNBUSDT | WAIT | 0/6 | 693.94 | 34.42 | 0.41 | 673.122 | 735.576 | 756.395 | 60 |
+| SOLUSDT | WAIT | 0/6 | 89.56 | 21.08 | 0.4 | 86.8732 | 94.9336 | 97.6204 | 60 |
+| XRPUSDT | WAIT | 0/6 | 1.1588 | 14.53 | 0.59 | 1.12404 | 1.22833 | 1.26309 | 60 |
+| NEARUSDT | WAIT | 1/6 | 3.682 | 23.2 | 0.61 | 3.57154 | 3.90292 | 4.01338 | 60 |
 
 ## BUY candidate checks
 
