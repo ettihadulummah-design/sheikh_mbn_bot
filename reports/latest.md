@@ -1,5 +1,5 @@
 # Binance Conservative Spot Scanner
-- Scan time (UTC): 2026-11-15T21:31:36+00:00
+- Scan time (UTC): 2026-11-15T22:20:34+00:00
 - Capital: $300.00 | Max risk/trade: $3.00
 - Overall: **WAIT / NO TRADE**
 - Symbols: BTCUSDT, ETHUSDT, BNBUSDT, SOLUSDT, XRPUSDT, NEARUSDT
